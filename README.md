@@ -32,4 +32,5 @@ All CSV are stored in a "data" folder I created
     * player's stats CSV to store all the stats everyday for each player
     * player's daily stats to store data of all player of the day
 
+# END RESULT
 You can visualize the project by visiting my ![LookerStudio]([url](https://lookerstudio.google.com/reporting/a6f70368-1a33-4118-be27-f078c9777f42)https://lookerstudio.google.com/reporting/a6f70368-1a33-4118-be27-f078c9777f42) project
