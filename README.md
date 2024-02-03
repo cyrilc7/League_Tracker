@@ -25,6 +25,10 @@ The LCK (League of Legends Champions Korea) is the premier professional league i
 Being a huge T1 (team operating in the LCK, 4 times world champions) and data fan myself, I always loved to check players SoloQ performance to get insights on the players' current form, see how next week's opponents are performing, but also check if there is a relationship between pro circuit performance and SoloQ performance.
 I decided to make this tracker to automate this process and share it to anyone interested in League of Legends SoloQ or pro circuit. It is easily readable and understandable for anyone regardless of their knowledge in the game.
 
+## Tools
+
+* Script: Python
+* Visualization: Tableau
 
 ## Project Information
 
@@ -49,8 +53,8 @@ The lowest possible elo is Diamond IV 0LP.
 
 ## Credits and References
 
-This process would not have been possible without RiotAPI and Deeplol.
-
+This process would not have been possible without RiotAPI and Deeplol. LCK logo is also property of Riot.
 
 ## End Result
-You can visualize the project by visiting my [Tableau Dashboard](https://public.tableau.com/views/LCKSoloQTracker/Tableaudebord2?:language=en-US&publish=yes&:display_count=n&:origin=viz_share_link)
+
+You can visualize the project by visiting my [Tableau Dashboard](https://public.tableau.com/views/LCKSoloQTracker/Tableaudebord2?:language=en-US&publish=yes&:display_count=n&:origin=viz_share_link). Feel free to contact me if you see any error, mistake or recommendation!
