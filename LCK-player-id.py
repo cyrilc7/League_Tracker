@@ -1,10 +1,11 @@
 import pandas as pd
 import requests
 from dotenv import load_dotenv
+import os
 
 # get API_KEY
 load_dotenv()
-api_key = os.getenv("api_key")
+api_key = os.getenv("API_KEY")
 
 # open  player csv file with player, team, role, region, gamename, tagline, puuid (empty), summonerid(empty)
 csv_path = r"data\LCK-players-24.csv"
