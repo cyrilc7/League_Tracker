@@ -1,17 +1,19 @@
 import pandas as pd
 import requests
 from datetime import datetime
+from dotenv import load_dotenv
+import os
 
-# note api key 
-## !! HIDE API WHEN SHARING !! ##
-#api_key = ?
+# get API_KEY
+load_dotenv()
+api_key = os.getenv("API_KEY")
 
 # get summoner csv to retrieve info
-#csv_path1 = path_to_players_account
+csv_path1 = r"data\LCK-players-24.csv"
 account_df = pd.read_csv(csv_path1, delimiter=',')
 
 # add stat csv to fill data in. Columns : date,player,team,role,region,LP,wins,losses,games,winrate. Can leave all columns empty
-#csv_path2 = path_to_player_stats
+csv_path2 = r"data\lck-player-stats.csv"
 stats_df = pd.read_csv(csv_path2, delimiter=',')
 player_names = stats_df['player'].tolist()
 
@@ -99,8 +101,11 @@ print(stats_df)
 stats_df.to_csv(csv_path2, index=False)
 
 # add new CSV to put daily stats. Columns : date,player,team,role,region,LP,wins,losses,winrate,games. Leave empty
-#csv_path3 = path_to_daily_stats
+csv_path3 = r"data\lck-stats-daily.csv"
 daily_stats_df = pd.read_csv(csv_path3, delimiter=',')
+
+# clear the contents of daily_stats_df
+daily_stats_df = pd.DataFrame(columns=daily_stats_df.columns)
 
 # put daily data into the dataframe we just created
 stats_df['date'] = pd.to_datetime(stats_df['date'])

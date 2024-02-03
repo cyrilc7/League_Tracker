@@ -1,36 +1,56 @@
-# DESCRIPTION
-This project is a SoloQ Tracker for pro players in the LCK.
-It shows the evolution of their performance in soloQ with different stats.
+# LCK SoloQ TRACKER
 
-### RIOT API
-The stats are acquired by querying RiotAPI.
-You will need an API Key. 
-!! API Keys are individual and should not be shared !!
-To get your API Key :
+![Dashboard Image](./Dashboard.png)
 
-    * Visit https://developer.riotgames.com/
-    * Log in
-    * You can either use daily "Development API Key" that you need to refresh every day
-        or
-    * You can click on "Register Product" to ask for a permanent API Key
-    
-### RANK AND TIER SYSTEM
-For the Rank and Tier, the standard point (0 point) is Master 0LP. Diamond rank will be below 0
-The lowest possible elo is Diamond IV 0LP
+## Introduction
 
-### CSV FILES
-Before starting the project, I created a CSV with the following columns:
+Welcome to the LCK Solo Queue Tracker! This project aims to provide insights into the solo queue performances of professional League of Legends players participating in the LCK (League of Legends Champions Korea).
 
-    * player, team, region, role, gamename, tagline, puuid, summonerID
-    * only puuid and summonerID columns are left empty
-    * You can get gamenames and taglines by visiting https://www.deeplol.gg/
+### *What is Solo Queue?*
+
+Solo queue is the standard matchmaking mode in League of Legends where individual players compete against others to climb the ranked ladder. It's a platform for players to showcase their individual skills and test their strategies in a competitive environment.
+
+### *What is LCK?*
+
+The LCK (League of Legends Champions Korea) is the premier professional league in South Korea, featuring top-tier teams and players. LCK is known for its high level of competition and has produced some of the world's most skilled and renowned players.
+
+## Features
+
+- **Performance Evolution:** Explore historical data to identify trends, track improvements, and gain insights into player performances over time
+- **Daily Statistics:** View daily statistics of the players' performance
+- **Filters:** Compare and track the performance of any players with tailored filters (player, team, role etc.)
+
+## Inspiration
+
+Being a huge T1 (team operating in the LCK, 4 times world champions) and data fan myself, I always loved to check players SoloQ performance to get insights on the players' current form, see how next week's opponents are performing, but also check if there is a relationship between pro circuit performance and SoloQ performance.
+I decided to make this tracker to automate this process and share it to anyone interested in League of Legends SoloQ or pro circuit. It is easily readable and understandable for anyone regardless of their knowledge in the game.
 
 
-All CSV are stored in a "data" folder I created
+## Project Information
 
-    * player's account CSV to store names, puuid and summonerID
-    * player's stats CSV to store all the stats everyday for each player
-    * player's daily stats to store data of all player of the day
+### *Process*
 
-# END RESULT
-You can visualize the project by visiting my ![LookerStudio]([url](https://lookerstudio.google.com/reporting/a6f70368-1a33-4118-be27-f078c9777f42)https://lookerstudio.google.com/reporting/a6f70368-1a33-4118-be27-f078c9777f42) project
+I completed the process through the following steps:
+
+* Fetched all the players' gamename through [deeplol.gg](https://www.deeplol.gg/)
+* Queried with RiotAPI their account ID and summonerID in order to get their daily stats
+* Queried with RiotAPI the daily statistics and automatically integrate them in a CSV file for visualization
+* Processed Data Visualization with [Tableau](https://public.tableau.com/views/LCKSoloQTracker/Tableaudebord2?:language=fr-FR&publish=yes&:display_count=n&:origin=viz_share_link) 
+
+### *Rank and Tier System*
+
+For the Rank and Tier, the standard point (0 point) is Master 0LP. Diamond rank will be below 0.
+The lowest possible elo is Diamond IV 0LP.
+
+## Sources
+
+* Gamenames : [deeplol.gg](https://www.deeplol.gg/)
+* Players' data : [Riot Developer](https://developer.riotgames.com)
+
+## Credits and References
+
+This process would not have been possible without RiotAPI and Deeplol.
+
+
+## End Result
+You can visualize the project by visiting my [Tableau Dashboard](https://public.tableau.com/views/LCKSoloQTracker/Tableaudebord2?:language=en-US&publish=yes&:display_count=n&:origin=viz_share_link)

@@ -1,13 +1,14 @@
 import pandas as pd
 import requests
+from dotenv import load_dotenv
+
+# get API_KEY
+load_dotenv()
+api_key = os.getenv("api_key")
 
 # open  player csv file with player, team, role, region, gamename, tagline, puuid (empty), summonerid(empty)
-#csv_path = path_to_players_account
+csv_path = r"data\LCK-players-24.csv"
 df = pd.read_csv(csv_path, delimiter=',')
-
-# note api key 
-## !! HIDE API WHEN SHARING !! ##
-#api_key = ?
 
 # get Riot API to query the puuid of the players
 account_api_base = "https://asia.api.riotgames.com/riot/account/v1/accounts/by-riot-id/"
